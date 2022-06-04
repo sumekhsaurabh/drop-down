@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #mybox {
+            width: 200px;
+            height: 150px;
+            background-color: #f7f7b5;
+            position: relative;
+            margin-top: 11px;
+            margin-left: -10px;
+            border: 2px solid black;
+            top: 0px;
+            left: 0px;
+            
+            
+            
+
+        }
+
+        #mybox:after {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background-color: #f7f7b5;
+            position: absolute;
+            bottom: 100px;
+            left: 11px;
+            top: -17px;
+            border-left: 2px solid black;
+            border-top: 2px solid black;
+            color: black;
+            transform: rotate(45deg);
+            
+         
+        
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+        }
+
+
+        .content {
+            display: none;
+            min-width: 160px;
+            max-width: 350px;
+            padding: 10px 15px;
+
+        }
+
+        .dropdown:hover .content {
+            display: block;
+
+        }
+
+        button {
+            width: 90px;
+            height: 33px;
+            background-color: #f099f7;
+            border-radius: 5px;
+            border-style: none;
+            border: 2px solid black;
+
+        }
+
+
+        ul li {
+            list-style: none;
+            margin-left: 10px;
+            padding-top: 10px;
+          
+
+        }
+
+        ul li a:hover {
+            color: rgb(66, 196, 40);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .main {
+            width: 90px;
+            height: 33px;
+            margin-left: 112px;
+            margin-top: 18px;
+            
+        }
+        .cont{
+            width: 197px;
+            height: 147px;
+            /* border: 2px solid black; */
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="dropdown">
+            <button>click me</button>
+
+            <div class="content">
+                <div id="mybox">
+                    <div class="cont">
+                        <ul>
+                            <li> <a href="#">home</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">contact us</a></li>
+                            <li> <a href="#">home</a></li>
+                            <li><a href="#">services</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
